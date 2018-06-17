@@ -37,9 +37,9 @@ int main() {
         scanf("%s", regex);
         scanf("%d", &w);
         cnt = 0;
-        memset(dp_table, -1, sizeof(int) * 101 * 101);
         for(j=0; j<w; j++) {
             scanf("%s", word);
+            memset(dp_table, -1, sizeof(int) * 101 * 101);
             if(wildcard(regex, word, 0, 0)) {
                 if(cnt == 0) {
                     strcpy(answerlist[0], word);
