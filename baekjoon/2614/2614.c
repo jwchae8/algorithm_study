@@ -120,7 +120,7 @@ void solve(int f) {
         break;
       }
     }
-    if(second - first > 6 || second - first < frogs[f][0] || arr[first] != arr[second])
+    if(second - first > 6 || second - first < frogs[f][0] || arr[first] != arr[second] || second - first < first || second - first <= n - second)
       return;
     else {
       tmp = arr[first];
@@ -170,5 +170,6 @@ int main() {
   for(i=0; i<21; i++) 
     for(j=0; j<ans_frogs[i]; j++) 
       printf("%d %d\n", frogs[i][1], frogs[i][0]);
+  int tmparr[202] = {0};
   return 0;
 }
